@@ -52,3 +52,10 @@ class Sulfuras(NormalItem, Item):
     def update_quality(self):
         assert self.quality == 80,"Quality de %s no es 80" % self.__class__.__name__
         pass
+
+
+##Clase conjuredItem
+class ConjuredItem(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+		
