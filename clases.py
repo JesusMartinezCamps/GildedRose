@@ -58,4 +58,10 @@ class Sulfuras(NormalItem, Item):
 class ConjuredItem(NormalItem, Item):
 	def __init__(self, name, sell_in, quality):
 		NormalItem.__init__(self, name, sell_in, quality)
-		
+
+
+
+##Clase BackstagePass
+class backstagePassTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
