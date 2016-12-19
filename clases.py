@@ -67,7 +67,23 @@ class backstagePassTest(NormalItem, Item):
 		NormalItem.__init__(self, name, sell_in, quality)
 
 
-##Clase para el text del elixir
+##Clase para el test del elixir
 class elixirTest(NormalItem, Item):
 	def __init__(self, name, sell_in, quality):
 		NormalItem.__init__(self, name, sell_in, quality)
+
+
+##Clase para el test de Aged Brie
+class agedBrieTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+
+	def update_quality(self):
+		if self.sell_in > 0:
+			self.setQuality(+1)
+		else:
+			setQuality(+2)
+
+
+	def setSell_in(self):
+        self.sell_in = self.sell_in - 1
