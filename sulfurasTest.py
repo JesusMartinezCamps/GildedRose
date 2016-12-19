@@ -5,7 +5,7 @@ from clases import *
 
 if __name__ == '__main__':
 
-	item = Sulfuras("Sulfuras, Hand of Ragnaros", 0, 75)
+	item = Sulfuras("Sulfuras, Hand of Ragnaros", 0, 80)
 	print(item)
 
 	for dia in range(1, 10):
