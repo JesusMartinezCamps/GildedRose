@@ -37,11 +37,17 @@ class NormalItem(Item, Interfaz):
 
     # Override metodo update_quality de la interfaz
     def update_quality(self):
-        if self.sell_in > 0:
+        if self.name == "Aged Brie":
+            if self.sell_in > 0:
+                self.setQuality(+1)
+            else:
+                self.setQuality(+2)
+        elif self.sell_in > 0:
             self.setQuality(-1)
         else:
             self.setQuality(-2)
         self.setSell_in()
+
 
 
 ##Clase sulfuras
@@ -52,3 +58,35 @@ class Sulfuras(NormalItem, Item):
     def update_quality(self):
         assert self.quality == 80,"Quality de %s no es 80" % self.__class__.__name__
         pass
+
+
+##Clase conjuredItem
+class ConjuredItem(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+
+
+
+##Clase BackstagePass
+class backstagePassTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+
+
+##Clase para el test del elixir
+class elixirTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+
+
+##Clase para el test de Aged Brie
+class agedBrieTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
+
+	#def update_quality(self):
+		
+
+
+	#def setSell_in(self):
+     #   self.sell_in = self.sell_in - 1
