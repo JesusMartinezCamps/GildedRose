@@ -37,11 +37,17 @@ class NormalItem(Item, Interfaz):
 
     # Override metodo update_quality de la interfaz
     def update_quality(self):
-        if self.sell_in > 0:
+        if self.name == "Aged Brie":
+            if self.sell_in > 0:
+                self.setQuality(+1)
+            else:
+                self.setQuality(+2)
+        elif self.sell_in > 0:
             self.setQuality(-1)
         else:
             self.setQuality(-2)
         self.setSell_in()
+
 
 
 ##Clase sulfuras
@@ -78,12 +84,9 @@ class agedBrieTest(NormalItem, Item):
 	def __init__(self, name, sell_in, quality):
 		NormalItem.__init__(self, name, sell_in, quality)
 
-	def update_quality(self):
-		if self.sell_in > 0:
-			self.setQuality(+1)
-		else:
-			setQuality(+2)
+	#def update_quality(self):
+		
 
 
-	def setSell_in(self):
-        self.sell_in = self.sell_in - 1
+	#def setSell_in(self):
+     #   self.sell_in = self.sell_in - 1
