@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
-#Caso test para el Backstage pass
+#Caso test del Elixir
 from clases import *
 
 if __name__ == '__main__':
 
-    item = backstagePassTest("Backstage passes to a TAFKAL80ETC concert", 15, 20)
+    item = elixirTest("Elixir of the Mongoose", 5, 7)
     # chequeo herencia __repr__
     print(item)
     # test update_quality

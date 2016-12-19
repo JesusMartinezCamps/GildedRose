@@ -65,3 +65,9 @@ class ConjuredItem(NormalItem, Item):
 class backstagePassTest(NormalItem, Item):
 	def __init__(self, name, sell_in, quality):
 		NormalItem.__init__(self, name, sell_in, quality)
+
+
+##Clase para el text del elixir
+class elixirTest(NormalItem, Item):
+	def __init__(self, name, sell_in, quality):
+		NormalItem.__init__(self, name, sell_in, quality)
